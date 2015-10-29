@@ -1,6 +1,3 @@
-//undeclared variables because the values will not be determined until the user inputs their answers
-
-var answer1, answer2, answer3, answer4;
 
 //starting out with zero questions correct because the values are not yet determined
 
@@ -19,10 +16,10 @@ var ans6 = document.getElementById('answer6');
 function firstQuestion() {
 var question1 = prompt('Have I ever broken a bone?').toLowerCase();
   if (question1 === 'yes' || question1 === 'y') {
-    ans1.innerHTML = 'correctly. I have broken one bone.';
+    ans1.innerHTML = 'I have broken one bone.';
     total++;
     } else {
-    ans1.innerHTML = 'wrong. I broke my coccyx jumping off a 30ft cliff into Whistle Lake in Anacortes.';
+    ans1.innerHTML = 'I broke my coccyx jumping off a 30ft cliff into Whistle Lake in Anacortes.';
     }
 } 
 
@@ -34,10 +31,10 @@ firstQuestion();
 function secondQuestion() {
 var question2 = prompt('Have I ever been to Disneyland?').toLowerCase();
   if (question2 === 'no' || question2 ==='n') {
-    ans2.innerHTML = 'correctly. I have never been to Disneyland.';
+    ans2.innerHTML = 'I have never been to Disneyland.';
     total++;
     } else {
-    ans2.innerHTML = 'wrong. I never went to Disneyland, but I am not a fan of children or slow walkers, so I am quite alright with that.';
+    ans2.innerHTML = 'I never went to Disneyland, but I am not a fan of children or slow walkers, so I am quite alright with that.';
     }
 }
 
@@ -46,10 +43,10 @@ secondQuestion();
 function thirdQuestion() {
 var question3 = prompt('Have I ever lived in North Dakota?').toLowerCase();
     if (question3 === 'yes' || question3 === 'y') {
-      ans3.innerHTML = 'correctly. I lived in North Dakota for 6 months.';
+      ans3.innerHTML = 'I lived in North Dakota for 6 months.';
       total++;
     } else {
-      ans3.innerHTML = 'wrong. I actually DID live in ND, but I only lasted 6 months.';
+      ans3.innerHTML = 'I actually DID live in ND, but I only lasted 6 months.';
       }
 }
 
@@ -63,7 +60,7 @@ var triesRemaining = 3;
 function fourthQuestion() {
   var question4 = parseInt(prompt('How many years do you think I have lived in King county?'));
   if (question4 === 10) {
-    answer4 = 'correctly. I have lived here since the day after I graduated high school.';
+    answer4 = 'I have lived here since the day after I graduated high school.';
     total++;
   } else if (question4 <= 9) {
     answer4 = 'Wrong. Longer than that... guess again!';
@@ -92,10 +89,10 @@ if (triesRemaining <= 0){
 function fifthQuestion() {
 var question5 = prompt('Did I meet my husband online?').toLowerCase();
   if (question5 === 'yes' || question5 === 'y') {
-    ans5.innerHTML = 'correctly. Like many couples these days, we DID meet online.';
+    ans5.innerHTML = 'Like many couples these days, we DID meet online.';
     total++;
   } else {
-    ans5.innerHTML = 'wrong. We were both too busy all the time to try and meet people. Yay internet!';
+    ans5.innerHTML = 'We were both too busy all the time to try and meet people. Yay internet!';
   }
 }
 
@@ -107,10 +104,10 @@ fifthQuestion();
 function sixthQuestion() {
 var question6 = parseInt(prompt('How many volcanoes are there in Washington State?'));
   if (question6 === 5) {
-    ans6.innerHTML = 'correctly. The last of our local volcanoes that erupted was Mount St. Helens in October of 2004.';
+    ans6.innerHTML = 'The last of our local volcanoes that erupted was Mount St. Helens in October of 2004.';
     total++;
   } else {
-    ans6.innerHTML = 'wrong. We have 5! Mount Rainier, Mt. St Helens, Mount Adams, Mount Baker, and Glacier Peak.';
+    ans6.innerHTML = 'We have 5! Mount Rainier, Mt. St Helens, Mount Adams, Mount Baker, and Glacier Peak.';
   }
 }
 
@@ -119,13 +116,5 @@ sixthQuestion();
 
 var user = prompt('What is your name?');
   alert('Welcome to my page ' + user + '. ' + 'You answered ' +  total + ' questions right!');
-  console.log('The player is named: ' + user);
 
-//these alerts appear after the questions are asked and the user is welcomed to the page
-//the correct answers for each question are in these alerts
-  alert('You answered question 1 ' + answer1);
-  alert('You answered question 2 ' + answer2);
-  alert('You answered question 3 ' + answer3);
-  alert('You answered question 4 ' + answer4);
-  alert('You answered question 5 ' + answer5);
-  alert('You answered question 6 ' + answer6);
+
