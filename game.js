@@ -16,12 +16,15 @@ var ans6 = document.getElementById('answer6');
 function firstQuestion() {
 var question1 = prompt('Have I ever broken a bone?').toLowerCase();
   if (question1 === 'yes' || question1 === 'y') {
-    ans1.innerHTML = 'I have broken one bone.';
+    ans1.innerHTML = 'I have broken one bone. <img src="images/cliffjump.jpg">';
+    ans1.className = 'correct';
     total++;
     } else {
     ans1.innerHTML = 'I broke my coccyx jumping off a 30ft cliff into Whistle Lake in Anacortes.';
+    ans1.className = 'wrong';
+
     }
-} 
+}
 
 firstQuestion();
 
@@ -31,10 +34,12 @@ firstQuestion();
 function secondQuestion() {
 var question2 = prompt('Have I ever been to Disneyland?').toLowerCase();
   if (question2 === 'no' || question2 ==='n') {
-    ans2.innerHTML = 'I have never been to Disneyland.';
+    ans2.innerHTML = 'I have never been to Disneyland.' + '<img src="images/150820175214-banksy-dismaland-super-169.jpg">';
+    ans2.className = 'correct';
     total++;
     } else {
     ans2.innerHTML = 'I never went to Disneyland, but I am not a fan of children or slow walkers, so I am quite alright with that.';
+    ans2.className = 'wrong';
     }
 }
 
@@ -43,10 +48,12 @@ secondQuestion();
 function thirdQuestion() {
 var question3 = prompt('Have I ever lived in North Dakota?').toLowerCase();
     if (question3 === 'yes' || question3 === 'y') {
-      ans3.innerHTML = 'I lived in North Dakota for 6 months.';
+      ans3.innerHTML = 'I lived in North Dakota for 6 months.' + '<img src="images/fargo.jpg">';
+      ans3.className = 'correct';
       total++;
     } else {
       ans3.innerHTML = 'I actually DID live in ND, but I only lasted 6 months.';
+      ans3.className = 'wrong';
       }
 }
 
@@ -60,12 +67,15 @@ var triesRemaining = 3;
 function fourthQuestion() {
   var question4 = parseInt(prompt('How many years do you think I have lived in King county?'));
   if (question4 === 10) {
-    answer4 = 'I have lived here since the day after I graduated high school.';
+    answer4 = 'I have lived here since the day after I graduated high school. <img src="images/seattle.jpg">';
+    ans4.className = 'correct';
     total++;
   } else if (question4 <= 9) {
     answer4 = 'Wrong. Longer than that... guess again!';
+    ans4.className = 'wrong';
   } else if (question4 >= 11) {
     answer4 = 'Wrong. Sadly, I have not been here quite that long. Guess again!';
+    ans4.className = 'wrong';
   }
 
       if (question4 !== 10){
@@ -89,10 +99,12 @@ if (triesRemaining <= 0){
 function fifthQuestion() {
 var question5 = prompt('Did I meet my husband online?').toLowerCase();
   if (question5 === 'yes' || question5 === 'y') {
-    ans5.innerHTML = 'Like many couples these days, we DID meet online.';
+    ans5.innerHTML = 'Like many couples these days, we DID meet online.' + '<img src="images/IMG_9450.jpg">';
+    ans5.className = 'correct';
     total++;
   } else {
     ans5.innerHTML = 'We were both too busy all the time to try and meet people. Yay internet!';
+    ans5.className = 'wrong';
   }
 }
 
@@ -104,10 +116,12 @@ fifthQuestion();
 function sixthQuestion() {
 var question6 = parseInt(prompt('How many volcanoes are there in Washington State?'));
   if (question6 === 5) {
-    ans6.innerHTML = 'The last of our local volcanoes that erupted was Mount St. Helens in October of 2004.';
+    ans6.innerHTML = 'The last of our local volcanoes that erupted was Mount St. Helens in October of 2004.' + '<img src="images/MtStHelens.jpg">';
+    ans6.className = 'correct';
     total++;
   } else {
     ans6.innerHTML = 'We have 5! Mount Rainier, Mt. St Helens, Mount Adams, Mount Baker, and Glacier Peak.';
+    ans6.className = 'wrong';
   }
 }
 
