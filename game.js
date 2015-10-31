@@ -69,28 +69,30 @@ function fourthQuestion() {
   if (question4 === 10) {
     answer4 = 'I have lived here since the day after I graduated high school. <img src="images/seattle.jpg">';
     ans4.className = 'correct';
+    ans4.innerHTML = answer4;
     total++;
+    triesRemaining = 0;
   } else if (question4 <= 9) {
-    answer4 = 'Wrong. Longer than that... guess again!';
+    triesRemaining--;
+    alert('Wrong. Longer than that...');
     ans4.className = 'wrong';
+    if (triesRemaining <= 0) {
+    alert('Sorry, you\'re out of guesses.');
+    ans4.innerHTML = 'I have been in King county for 10 years now.';
+    }
   } else if (question4 >= 11) {
-    answer4 = 'Wrong. Sadly, I have not been here quite that long. Guess again!';
+    triesRemaining--;
+    alert('Wrong. Sadly, I have not been here quite that long.');
     ans4.className = 'wrong';
-  }
-
-      if (question4 !== 10){
-        triesRemaining--;
-        alert(answer4);
+    if (triesRemaining <= 0) {
+    alert('Sorry, you\'re out of guesses.');
+    ans4.innerHTML = 'I have been in King county for 10 years now.';
+    }
   }
 }
-
 do {
   fourthQuestion();
-} while (triesRemaining > 0)
-
-if (triesRemaining <= 0){
-    alert('Sorry, you\'re out of guesses.');
-  }
+} while (triesRemaining > 0);
 
 
 //question 5 -- yes or no, if else statement with an 'or' operator to account
@@ -110,8 +112,8 @@ var question5 = prompt('Did I meet my husband online?').toLowerCase();
 
 fifthQuestion();
 
-//question 6 -- numeric, no wiggle room... they already had a
-//question with multiple guesses allowed.
+// //question 6 -- numeric, no wiggle room... they already had a
+// //question with multiple guesses allowed.
 
 function sixthQuestion() {
 var question6 = parseInt(prompt('How many volcanoes are there in Washington State?'));
