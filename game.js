@@ -22,7 +22,6 @@ var question1 = prompt('Have I ever broken a bone?').toLowerCase();
     } else {
     ans1.innerHTML = 'I broke my coccyx jumping off a 30ft cliff into Whistle Lake in Anacortes.';
     ans1.className = 'wrong';
-
     }
 }
 
@@ -65,9 +64,9 @@ thirdQuestion();
 var triesRemaining = 3;
 
 function fourthQuestion() {
-  var question4 = parseInt(prompt('How many years do you think I have lived in King county?'));
+  var question4 = parseInt(prompt('How many years do you think I have lived in King county? Enter a number between 1 and 28.'));
   if (question4 === 10) {
-    answer4 = 'I have lived here since the day after I graduated high school. <img src="images/seattle.jpg">';
+    answer4 = 'I have lived here for a while... <img src="images/seattle.jpg">';
     ans4.className = 'correct';
     ans4.innerHTML = answer4;
     total++;
